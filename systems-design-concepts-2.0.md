@@ -1,6 +1,8 @@
 
 # System Design Topics
 
+- [Youtube Playlist](https://www.youtube.com/playlist?list=PLjTveVh7FakLdTmm42TMxbN8PvVn5g4KJ)
+
 ## DB Indexes
 
 ### Hash Indexes
@@ -25,10 +27,15 @@
 
 ## Column Oriented Storage
 
+- column oriented storage can take column specific compressions like parquet file format to compress the column and only decompress the data only when the column data is requested
+- usually uses LSM-Tree + SSTable Index
+- Examples : Apache HBase, Apache Cassandra
 
 ## Data Serialization Frameworks
 
-## Intro to Replication
+## Replication
+
+### Intro to Replication
 
 ### Dealing with Stale reads
 
