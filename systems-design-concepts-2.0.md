@@ -5,6 +5,8 @@
 
 ## DB Indexes
 
+- An Index is a technique by which a database query performance can be improved specific to certain types of queries. For example, A Hash Index improves single element search queries, B-Tree indexes speed up range queries
+
 ### Hash Indexes
 
 ### B-Tree Indexes
