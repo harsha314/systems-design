@@ -1,0 +1,5 @@
+- What's SSL Termination
+- PostGIS uses quadtree indexing for spatial queries
+- Redis uses geohashing for spatial queries
+- implementing distributed lock with DynamoDB & TTL for handling driver-rider matching
+- Uber Android's core UI toolkit is fully native, built with standard Android frameworks and libraries, including full Jetpack Compose support, rather than a cross-platform framework like React Native which they previously attempted and deprecated. Uber's mobile architecture uses a combination of custom components and the VIPER pattern, but the frontend implementation for Android is native code.
