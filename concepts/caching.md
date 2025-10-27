@@ -1,0 +1,3 @@
+# Caching
+
+- Faster reads/writes
