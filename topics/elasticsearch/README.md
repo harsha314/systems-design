@@ -1,14 +1,16 @@
-Excellent — Elasticsearch is another great technology to learn hands-on, and you can absolutely use **public APIs and open datasets** for all your projects without needing paid data sources.
+# Elasticsearch
 
-Below is a **progressive set of 3 Elasticsearch projects** (beginner → intermediate → advanced), each with **clear functional** and **non-functional requirements**, designed to work fine on your laptop (8 GB RAM, Intel i5 12th gen).
+## Search Engine
 
----
+- **Reciprocal Rank Fusion**
 
-## 🔍 **Project 1 — News Article Search Engine (Beginner)**
+## Elasticsearch Hands-On Projects
+
+### 🔍 **Project 1 — News Article Search Engine (Beginner)**
 
 **Goal:** Learn core Elasticsearch concepts — indexing, querying, and ranking text data.
 
-### Functional Requirements
+#### Functional Requirements
 
 1. Collect data from a **free News API** such as:
 
@@ -26,7 +28,7 @@ Below is a **progressive set of 3 Elasticsearch projects** (beginner → interme
 
 5. Return top 10 relevant results for a given query (e.g., _“AI regulation”_).
 
-### Non-Functional Requirements
+#### Non-Functional Requirements
 
 - Run **Elasticsearch locally via Docker** (`docker run elasticsearch:8.x`).
 - Indexing time ≤ 2 minutes for 1k documents.
@@ -39,11 +41,11 @@ Indexing, analyzers, tokenizers, mapping, search scoring, REST APIs.
 
 ---
 
-## ⚙️ **Project 2 — Twitter or Reddit Trend Analyzer (Intermediate)**
+### ⚙️ **Project 2 — Twitter or Reddit Trend Analyzer (Intermediate)**
 
 **Goal:** Work with real-time data ingestion and analytics queries.
 
-### Functional Requirements
+#### Functional Requirements
 
 1. Fetch live or recent posts using:
 
@@ -62,7 +64,7 @@ Indexing, analyzers, tokenizers, mapping, search scoring, REST APIs.
 
 5. Expose REST endpoints for queries (via Flask/FastAPI).
 
-### Non-Functional Requirements
+#### Non-Functional Requirements
 
 - Micro-batch indexing (e.g., 100 documents/second max).
 - Elasticsearch heap ≤ 2 GB.
@@ -74,7 +76,7 @@ Bulk indexing, aggregations, simple NLP preprocessing, working with streaming AP
 
 ---
 
-## 🧠 **Project 3 — Product Search & Recommendation Engine (Advanced)**
+### 🧠 **Project 3 — Product Search & Recommendation Engine (Advanced)**
 
 **Goal:** Combine structured + unstructured data with ranking and suggest features.
 
@@ -98,7 +100,7 @@ Bulk indexing, aggregations, simple NLP preprocessing, working with streaming AP
 
 4. Build a small web UI for search and suggestions (Flask/React).
 
-### Non-Functional Requirements
+#### Non-Functional Requirements
 
 - Support 100k documents (subset large datasets if needed).
 - Response time < 400 ms for search.
@@ -110,7 +112,7 @@ Advanced queries, custom analyzers, suggesters, relevancy tuning, ranking, UI in
 
 ---
 
-### 🔼 Suggested Progression
+#### 🔼 Suggested Progression
 
 | Level | Project                          | Key Concepts                       |
 | :---- | :------------------------------- | :--------------------------------- |
@@ -120,7 +122,7 @@ Advanced queries, custom analyzers, suggesters, relevancy tuning, ranking, UI in
 
 ---
 
-### 🧰 Setup Notes
+#### 🧰 Setup Notes
 
 - **Elasticsearch Local Setup:**
 
