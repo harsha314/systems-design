@@ -1,8 +1,86 @@
 # Elasticsearch
 
-## Search Engine
+## Core Concepts
 
-- **Reciprocal Rank Fusion**
+### Document & Index
+
+- **Document** Store
+- **Index** : Collection of Documents
+
+### Mapping
+
+- Schema definition consisting of fields and their data types
+- Text, Keyword, Date, Number, Boolean, Geo-point, etc.
+- Text vs Keyword:
+  - Text: Analyzed for full-text search
+  - Keyword: Not analyzed, for exact matches, sorting, aggregations
+
+### Search Index
+
+- Foundation of ES search — maps each token → list of docs containing it.
+- Inverted index for fast full-text search.
+
+#### **Ranking Algorithms**
+
+- **TF-IDF (old versions)**
+- **BM25 (default)**
+
+  - Improves scoring by accounting for term saturation.
+
+- **Reciprocal Rank Fusion** :
+
+---
+
+## REST API Operations
+
+- **Create Index** : PUT /{index}
+  body : {"mappings": { ... }, "settings": { ... } }
+- **Add Document** : POST /{index}/\_doc :
+  body: { "field1": "value1", "field2": "value2", ... }
+- **Search Documents** : GET /{index}/\_search :
+  body: { "query": { ... }, "aggs": { ... } }
+- **Update Document** : POST /{index}/\_update/{id} :
+  body: { "doc": { "field": "new_value" } }
+- **Update Document by version** :
+  POST /{index}/\_update/{id}?if_seq_no={seq_no}&if_primary_term={primary_term} :
+  body: { "doc": { "field": "new_value" } }
+
+---
+
+## Search Queries
+
+- **Match Query (full-text)** : Uses analyzers, token filters, stemming.
+- **Term Query (exact value match)** : No analysis — used for keyword fields.
+- **Bool Query (must, should, filter)** : Most common enterprise search pattern.
+- **Aggregations** : Equivalent of SQL GROUP BY.
+
+  - `terms` – top values
+  - `date_histogram` – time series
+  - `avg`, `sum`, `max`, `cardinality`
+
+- **Autocomplete / Suggestions**
+
+  - Completion suggester
+  - N-gram analyzers
+
+## Distributed Architecture
+
+### **Shards & Replicas**
+
+- **Primary shard** → handles indexing
+- **Replica shards** → serve reads, provide HA
+- Default: 1 shard, 1 replica.
+
+### **How Elasticsearch scales**
+
+- Scale **horizontally** by adding more nodes.
+- Cluster automatically distributes shards.
+
+### **What SDE-II interviewers expect**
+
+- Ability to explain **shard allocation**, **cluster rebalance**.
+- Understanding of **write amplification** & **segment merges**.
+- How ES ensures **near real-time** search.
 
 ## Elasticsearch Hands-On Projects
 
