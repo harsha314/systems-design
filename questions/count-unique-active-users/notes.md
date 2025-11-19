@@ -2,6 +2,6 @@
 
 - count unique active users approximately in a given time window
 
-## Hyperloglog Approach
+## Approximate Approach
 
 - Redis Hyperloglog Datastructure to store user ids and get a probablistic count of unique active users through the session service
